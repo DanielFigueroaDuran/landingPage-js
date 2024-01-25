@@ -99,7 +99,7 @@ header {
 /* Main */
 .content {
   position: relative;
-  top: 80px;
+  top: 150px;
   width: 80%;
   height: 100vh;
   display: flex;
@@ -108,6 +108,8 @@ header {
 }
 
 .content__text {
+  padding: 0.5rem;
+  gap: 10px;
   width: 450px;
 }
 
@@ -127,16 +129,116 @@ header {
 
 .text__button {
   text-decoration: none;
-  color: var(--white);
+  color: var(--orange);
   padding: 15px 25px;
   border: 2px solid var(--orange);
   text-transform: uppercase;
   transition: 0.4s;
 }
+
+.text__button:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.content__image {
+  display: grid;
+  place-items: center;
+  width: 500px;
+  height: 100%;
+}
+
+.content__image img {
+  margin-top: 100px;
+  width: 500px;
+}
 /* Box */
+
+.box {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 700px;
+  height: 1500px;
+  background-color: var(--black2);
+  z-index: -1;
+  transform: rotate(45deg);
+}
 
 /* Cards */
 
-/* Redes Sociales */
+.cards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 80px;
+  width: 100%;
+  gap: 20px;
+}
 
+.cards__card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  gap: 10px;
+}
+
+.cards__card i {
+  color: var(--orange);
+  font-size: 1.5em;
+}
+
+.cards__card h3 {
+  color: var(--white);
+  font-size: 1.1em;
+}
+
+.cards__card p {
+  color: var(--white);
+  font-size: 1em;
+}
+
+/* Redes Sociales */
+.social {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social a {
+  font-size: 1.5em;
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.social a:hover {
+  color: var(--orange);
+}
 /* Brearpoint */
+
+/* Pantallas Largas */
+@media screen and (max-width: 1200px) {
+  .content__text {
+    margin-left: 80px;
+  }
+  .content__text h1 {
+    font-size: 2.5em;
+  }
+
+  .content__image img {
+    width: 450px;
+  }
+}
+
+/* Laptos */
+
+/* Tablets */
+
+/* Celulares */
