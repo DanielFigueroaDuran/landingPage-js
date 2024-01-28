@@ -63,3 +63,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Mostrar/Ocultar menu
+
+let nav = document.querySelector("nav");
+let buttonMenu = document.querySelector(".button-menu");
+
+buttonMenu.addEventListener("click", function () {
+  nav.classList.toggle("active");
+  changeIcon();
+});
+
+function changeIcon() {
+  let iconBtnMenu = document.querySelector(".button-menu i");
+
+  if (iconBtnMenu.classList.contains("ri-menu-3-line")) {
+    iconBtnMenu.classList.remove("ri-menu-3-line");
+    iconBtnMenu.classList.add("ri-close-line");
+  } else {
+    iconBtnMenu.classList.remove("ri-close-line");
+    iconBtnMenu.classList.add("ri-menu-3-line");
+  }
+}
